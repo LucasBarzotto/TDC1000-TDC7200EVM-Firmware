@@ -25,4 +25,10 @@ The main changes are:
           TDC7200_reg_local_copy[10] = {0x02, 0x40, 0x07, 0x07, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00 }; 
           TDC1000_reg_local_copy[10] = {0x41, 0x41, 0x00, 0x04, 0x5F, 0x03, 0xFF, 0x00, 0x23, 0x00 };
  
+   - These modifications were made aiming a prototype of an water flow meter that sends the data from GPIO3 to a ZigBEE module (Xbee3), so it could be transmited to a coordinator and also uploaded to the cloud using a gateway. Take a look in the picture.jpeg.
+  - The original firmware can be found in the TDC1000_7200EVM_Firmware_Source-v2.01.zip.
+  - The altered firmware can be found in the new_firmware_project.zip
+  
  PS: don't forget to change the variable -printf_support from minimal to full on the CCS's project properties.
+ 
+
