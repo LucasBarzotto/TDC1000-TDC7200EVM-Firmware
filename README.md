@@ -2,8 +2,8 @@
 In this project I changed the firmware of the Texas Instruments board TDC1000-TDC7200EVM so it could work without the GUI and send the data through serial communication. The version of Code Composer Studio used was 6.1.0.
 
 The main changes are:
- - The board now can work regardless the GUI i.e. it doesn't need USB communication
- - It works with 5V supply (in the mini USB plug)
+ - The board now can work regardless the GUI i.e. it doesn't need USB communication.
+ - It works with 5V supply (in the mini USB plug).
  - It sends its data through the GPIO3 pin from JP4 grouping (not populated) with Baud Rate 115200 bps.
  - For water flow measurement given in liters per second the output was modified to send the actual flow rate (for flow meter) in the following code (tdc7200_calculation.c):
  
@@ -20,7 +20,7 @@ The main changes are:
           nivelagua = (start2stop[i])*640*100*1.15736/1000000000;
           sprintf((char *)outString, "Nível: %4.6f centímetros", nivelagua);
   
-   And the registers could be:
+    And the registers could be:
    
           TDC7200_reg_local_copy[10] = {0x02, 0x40, 0x07, 0x07, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00 }; 
           TDC1000_reg_local_copy[10] = {0x41, 0x41, 0x00, 0x04, 0x5F, 0x03, 0xFF, 0x00, 0x23, 0x00 };
